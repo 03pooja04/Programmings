@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ADD INCOME</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: pink;
+    padding: 20px;
+    border-radius: 30px;
+    border : dashed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-bottom: 20px;
+    
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form action="addIncome" method="POST">
+        <label> ENTER INCOME</label><br>
+        <input type="text" name="incomeAmount"><br>
+
+        <label> SELECT CATEGORY</label><br>
+        <select name="incomeCategory">
+            <option name="incomeCategory" value="allowance">Allowance</option>
+            <option name="incomeCategory" value="Bonus">Bonus</option>
+            <option name="incomeCategory" value="Business">Business</option>
+            <option name="incomeCategory" value="Pension">Pension</option>
+            <option name="incomeCategory" value="Salary">Salary</option>
+            <option name="incomeCategory" value="Other">other</option>
+        </select><br>
+
+        <label>SELECT INCOME TYPE</label><br>
+        <input type="radio" name="incomeType" value="Bank">BANK
+        <input type="radio" name="incomeType" value="Card">CARD
+        <input type="radio" name="incomeType" value="Cash">CASH
+        <input type="radio" name="incomeType" value="Other">OTHER<br>
+        <br>
+        <br>
+
+        <input type="text" name="IncomeNote" placeholder="Add Note"><br>
+
+        <label>SELECT DATE AND TIME</label><br>
+        <input type="date" name="Date" placeholder="Date">
+        <input type="time" name="Time" placeholder="Time"><br>
+
+        <input type="submit" value="SAVE" >
+    </form>
+</div>
+
+</body>
+</html>

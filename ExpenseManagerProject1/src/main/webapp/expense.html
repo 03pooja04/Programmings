@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ADD INCOME</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: pink;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-bottom: 20px;
+    
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form action="addExpense" method="POST">
+        <label> ENTER EXPENSE</label><br>
+        <input type="text" name="expenseAmount"><br>
+
+        <label> SELECT CATEGORY</label><br>
+        <select name="expenseCategory">
+            <option name="expenseCategory" value="glocery">Glocery</option>
+            <option name="expenseCategory" value="mobile recharge">Mobile Recharge</option>
+            <option name="expenseCategory" value="petrol">Petrol</option>
+            <option name="expenseCategory" value="P.G.rent">P.G.Rent</option>
+            <option name="expenseCategory" value="mess">Mess</option>
+            <option name="expenseCategory" value="stationary">Stationary</option>
+            <option name="expenseCategory" value="Other">other</option>
+        </select><br>
+
+        <label>SELECT EXPENSE TYPE</label><br>
+        <input type="radio" name="incomeType" value="Bank">BANK
+        <input type="radio" name="incomeType" value="Card">CARD
+        <input type="radio" name="incomeType" value="Cash">CASH
+        <input type="radio" name="incomeType" value="Other">OTHER<br>
+        <br>
+        <br>
+
+        <input type="text" name="ExpenseNote" placeholder="Add Note"><br>
+
+        <label>SELECT DATE AND TIME</label><br>
+        <input type="date" name="expenseDate" placeholder="Date">
+        <input type="time" name="expenseTime" placeholder="Time"><br>
+
+        <input type="submit" value="SAVE" >
+    </form>
+</div>
+
+</body>
+</html>
